@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@font-face { font-family: 'Share Tech Mono'; src: url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); }
+
+
+
+/* CRT EFFECT FOR TEXT */
+
+html {
+  background-color: #000000;
+  padding: 1em;
+  line-height: 1;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+ @media screen and (min-width: 1200px) {
+    body {
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+      body {
+          margin-left: 5em;
+          margin-right: 5em;
+      }
+  }
+  
+  @keyframes textflicker {
+    from {
+      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+  }
+
+
+body {
+  background-color: #000000;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+/* MAIN TITLE */
+
+#maintitle {
+  color: rgb(3, 199, 0);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 100px;
+  text-align: center;
+  padding: 5px;
+  border: solid 5px rgb(3, 199, 0);
+  margin: 5%;
+}
+
+/* SIDEBAR */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: rgb(3, 199, 0);
+  font-family: 'Share Tech Mono', monospace;
+  list-style-type:none;
+}
+
+nav {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #1a1919;
+  width: 80px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, alpha);
+}
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+}
+.logo img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+.logo span {
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a {
+  position:relative;
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  width: 100%;
+  color: #007e13;
+  padding: 10px;
+}
+.fas{
+  position:relative;
+  width: 30px;
+  height: 40px;
+  top: 14px;
+  font-size: 50px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .fas {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fas {
+    font-size: 60px;
+  }
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 50px;
+  font-size: 50px;
+}
+a:hover{
+  background: #303030;
+}
+nav:hover {
+  width: 280px;
+  transition: all 0.5s ease;
+}
+
+/* Typing Effect */
+.container {
+  --characters: 26;
+  --typingSpeed: 5s;
+  
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  
+  .text {
+    position: relative;
+    padding: 10px;
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &::before {
+      background: #000;
+      animation: typing var(--typingSpeed) steps(var(--characters)) 2s infinite;
+    }
+    &::after {
+      background: green;
+      width: 1ch;
+      animation: 
+        typing var(--typingSpeed) steps(var(--characters)) 2s infinite,
+        blinking 0.25s ease alternate infinite;
+    }
+  }
+}
+
+@keyframes blinking {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes typing {
+  80%, 100% {
+    left: 100%;
+  }
+}
+
+/* BLOG HOMEPAGE */
+
+#blog {
+  color: rgb(3, 199, 0);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  border: solid 2px rgb(3, 199, 0);
+  margin: 20px;
+}
+
+ul.bloglist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color:rgb(3, 199, 0);
+}
+
+/* IMAGE GALLERY */
+
+.imgcontainer {
+  max-width: 85%;
+  margin: 20px auto;
+  columns: 3 250px;
+  gap: 15px;
+}
+
+.imgcontainer .imggallery {
+  columns: 3 250px;
+  gap: 15px;
+
+}
+
+.imgcontainer .imggallery img{
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.imgcontainer .imggallery img:hover {
+  box-shadow: 0 4px 20px rgba(3, 199, 0, 0.5);
+  transform: scale(1.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
